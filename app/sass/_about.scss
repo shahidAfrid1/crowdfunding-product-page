@@ -1,0 +1,78 @@
+.about{
+    width: 100%;
+    padding: 35px 20px;
+    background-color: white;
+    box-shadow: 0px 1px 5px rgb(214, 214, 214);
+    border-radius: 5px;
+    > h3{
+        font-size: 17.2px;
+        margin-bottom: 25px;
+    }
+
+    > p{
+        font-size: 13.4px;
+        line-height: 1.7;
+        margin-bottom: 22px;
+        color: $Darkgray;
+    }
+
+    .card{
+        width: 100%;
+        border: 1px solid $Darkgray;
+        margin-top: 33px;
+        border-radius: 10px;
+        padding: 20px 22.5px;
+        &.out-of-stock{
+            opacity: .5;
+        }
+        .title{
+            > h4{
+                font-size: 13.5px;
+                margin-bottom: 8px;
+            }
+            > h5{
+                font-size: 13.5px;
+                font-weight: 400;
+                color: $Moderatecyan;
+                margin-bottom: 23px;
+                
+            }
+        }
+
+        > p{
+            font-size: 13.5px;
+            line-height: 1.7;
+            color: $Darkgray;
+            margin-bottom: 23px;
+        }
+
+        .stats{
+            > p{
+                
+                font-size: 30.5px;
+                font-weight: 700;
+                > span{
+                    font-size: 15px;
+                    font-weight: 300;
+                    text-align: center;
+                    color: $Darkgray;
+                }
+                margin-bottom: 18px;
+            }
+            > button{
+                width: 150px;
+                height: 50px;
+                border: none;
+                background-color: $Moderatecyan;
+                border-radius: 30px;
+                font-size: 13.5px;
+                font-weight: 700;
+                font-family: 'Commissioner', sans-serif;
+                color: white;
+                &.out-of-stock{
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
