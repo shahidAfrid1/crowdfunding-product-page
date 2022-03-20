@@ -1,0 +1,57 @@
+.thanks-msg {
+  background: #00000096;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 120px 25px;
+  z-index: 200;
+  height: 100vh;
+  width: 100%;
+  @include tbl{
+      padding: 201px 15% 100px;
+  }
+  @include sml {
+    padding: 201px 20% 100px;
+  }
+  @include lgl {
+    padding: 201px 35% 100px;
+  }
+  display: none;
+  &.active {
+    display: block;
+  }
+  .container {
+    background: white;
+    padding: 30px 23px 35px;
+    border-radius: 10px;
+    text-align: center;
+
+    > h3 {
+      margin: 17px 0 28px;
+      font-size: 18px;
+    }
+    > p {
+      font-size: 14px;
+      font-size: 500;
+      line-height: 1.7;
+      color: $Darkgray;
+      margin-bottom: 30px;
+    }
+    > button {
+      width: 113px;
+      height: 50px;
+      border-radius: 30px;
+      border: none;
+      background-color: $Moderatecyan;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 700;
+      font-family: "Commissioner", sans-serif;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: $Darkcyan;
+      }
+    }
+  }
+}

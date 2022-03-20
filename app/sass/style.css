@@ -50,6 +50,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 30px 25px;
+  overflow: hidden;
 }
 
 @media (min-width: 769px) {
@@ -184,13 +185,13 @@ main .overlay .hamberger-menu > p {
 
 .hero {
   max-width: 100%;
-  padding: 250px 7% 0 7%;
+  padding: 250px 7% 100px 7%;
   position: relative;
 }
 
 @media (min-width: 1025px) {
   .hero {
-    padding: 201px 24.7% 0;
+    padding: 201px 24.7% 100px;
   }
 }
 
@@ -366,8 +367,8 @@ main .overlay .hamberger-menu > p {
   padding: 38px 23px;
   margin-bottom: 25px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 1px 5px #d6d6d6;
-          box-shadow: 0px 1px 5px #d6d6d6;
+  -webkit-box-shadow: 0px 1px 5px #ebe9e9;
+          box-shadow: 0px 1px 5px #ebe9e9;
 }
 
 @media (min-width: 769px) {
@@ -449,14 +450,28 @@ main .overlay .hamberger-menu > p {
   width: 100%;
   padding: 35px 20px;
   background-color: white;
-  -webkit-box-shadow: 0px 1px 5px #d6d6d6;
-          box-shadow: 0px 1px 5px #d6d6d6;
+  -webkit-box-shadow: 0px 1px 5px #ebe9e9;
+          box-shadow: 0px 1px 5px #ebe9e9;
   border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  .about {
+    padding: 35px 50px;
+  }
 }
 
 .about > h3 {
   font-size: 17.2px;
   margin-bottom: 25px;
+  font-weight: 700;
+}
+
+@media (min-width: 769px) {
+  .about > h3 {
+    font-size: 19.7px;
+    margin-bottom: 40px;
+  }
 }
 
 .about > p {
@@ -466,16 +481,45 @@ main .overlay .hamberger-menu > p {
   color: #7a7a7a;
 }
 
+@media (min-width: 769px) {
+  .about > p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+  }
+}
+
 .about .card {
   width: 100%;
-  border: 1px solid #7a7a7a;
+  border: 1px solid #d6d6d6;
   margin-top: 33px;
-  border-radius: 10px;
+  border-radius: 7px;
   padding: 20px 22.5px;
+}
+
+@media (min-width: 769px) {
+  .about .card {
+    padding: 30px 28px;
+  }
 }
 
 .about .card.out-of-stock {
   opacity: .5;
+}
+
+@media (min-width: 769px) {
+  .about .card .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px;
+  }
 }
 
 .about .card .title > h4 {
@@ -483,11 +527,24 @@ main .overlay .hamberger-menu > p {
   margin-bottom: 8px;
 }
 
+@media (min-width: 769px) {
+  .about .card .title > h4 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
 .about .card .title > h5 {
   font-size: 13.5px;
-  font-weight: 400;
+  font-weight: 500;
   color: #3cb4ac;
   margin-bottom: 23px;
+}
+
+@media (min-width: 769px) {
+  .about .card .title > h5 {
+    font-size: 15px;
+  }
 }
 
 .about .card > p {
@@ -495,6 +552,27 @@ main .overlay .hamberger-menu > p {
   line-height: 1.7;
   color: #7a7a7a;
   margin-bottom: 23px;
+}
+
+@media (min-width: 769px) {
+  .about .card > p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 769px) {
+  .about .card .stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .about .card .stats > p {
@@ -511,7 +589,7 @@ main .overlay .hamberger-menu > p {
 }
 
 .about .card .stats > button {
-  width: 150px;
+  width: 155px;
   height: 50px;
   border: none;
   background-color: #3cb4ac;
@@ -520,9 +598,313 @@ main .overlay .hamberger-menu > p {
   font-weight: 700;
   font-family: 'Commissioner', sans-serif;
   color: white;
+  cursor: pointer;
+}
+
+.about .card .stats > button:hover {
+  background-color: #147b74;
 }
 
 .about .card .stats > button.out-of-stock {
   background-color: black;
+  opacity: .5;
+}
+
+.project-selector {
+  width: 100%;
+  background: #00000096;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 120px 7%;
+  display: none;
+  z-index: 200;
+}
+
+@media (min-width: 1025px) {
+  .project-selector {
+    padding: 201px 24.7% 100px;
+  }
+}
+
+.project-selector.active {
+  display: block;
+}
+
+.project-selector .container {
+  background: white;
+  padding: 30px 23px;
+  border-radius: 10px;
+}
+
+.project-selector .container .head-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+.project-selector .container .head-title > h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-selector .container .head-title .cancel-btn {
+  width: 15px;
+  cursor: pointer;
+}
+
+.project-selector .container .head-title .cancel-btn .line {
+  width: 100%;
+  height: 4px;
+  background-color: #7a7a7a;
+  -webkit-transform-origin: 0.4px 2px;
+          transform-origin: 0.4px 2px;
+}
+
+.project-selector .container .head-title .cancel-btn .line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-bottom: 6px;
+}
+
+.project-selector .container .head-title .cancel-btn .line2 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.project-selector .container > p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #7a7a7a;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.project-selector .container > form .card-option {
+  border: 1px solid #cecece;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.project-selector .container > form .card-option.out-of-stock {
+  opacity: .5;
+}
+
+.project-selector .container > form .card-option.active {
+  border: 2px solid #147b74;
+}
+
+.project-selector .container > form .card-option.active .input-box {
+  display: block;
+}
+
+.project-selector .container > form .card-option .text-box {
+  padding: 31px 24px 15px;
+}
+
+.project-selector .container > form .card-option .text-box .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+
+.project-selector .container > form .card-option .text-box .title > input {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  border: px solid #cecece;
+  cursor: pointer;
+}
+
+.project-selector .container > form .card-option .text-box .title > input[name="option"] {
+  accent-color: #147b74;
+}
+
+.project-selector .container > form .card-option .text-box .title .headings > h4 {
+  font-size: 14px;
+}
+
+.project-selector .container > form .card-option .text-box .title .headings > h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3cb4ac;
+  margin-top: 5px;
+}
+
+.project-selector .container > form .card-option .text-box > p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #7a7a7a;
+  margin-bottom: 20px;
+}
+
+.project-selector .container > form .card-option .text-box .number {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 0;
+}
+
+.project-selector .container > form .card-option .text-box .number > span {
+  font-size: 15px;
+  font-weight: 300;
+  color: #7a7a7a;
+  margin-left: 10px;
+}
+
+.project-selector .container > form .card-option .input-box {
+  border-top: 1.5px solid #cecece;
+  text-align: center;
+  padding: 28px 0;
+  display: none;
+}
+
+.project-selector .container > form .card-option .input-box > p {
+  margin-bottom: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+
+.project-selector .container > form .card-option .input-box > input {
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+  margin-right: 15px;
+  border: 1px solid #cacaca;
+  padding-left: 23px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.project-selector .container > form .card-option .input-box > input:focus {
+  outline: 0.5px solid #bbbbbb;
+}
+
+.project-selector .container > form .card-option .input-box > input::-webkit-input-placeholder {
+  color: #7a7a7a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.project-selector .container > form .card-option .input-box > input:-ms-input-placeholder {
+  color: #7a7a7a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.project-selector .container > form .card-option .input-box > input::-ms-input-placeholder {
+  color: #7a7a7a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.project-selector .container > form .card-option .input-box > input::placeholder {
+  color: #7a7a7a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.project-selector .container > form .card-option .input-box > button {
+  width: 113px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  background-color: #3cb4ac;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+.project-selector .container > form .card-option .input-box > button:hover {
+  background-color: #147b74;
+}
+
+.thanks-msg {
+  background: #00000096;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 120px 25px;
+  z-index: 200;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+@media (min-width: 481px) {
+  .thanks-msg {
+    padding: 201px 15% 100px;
+  }
+}
+
+@media (min-width: 769px) {
+  .thanks-msg {
+    padding: 201px 20% 100px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .thanks-msg {
+    padding: 201px 35% 100px;
+  }
+}
+
+.thanks-msg.active {
+  display: block;
+}
+
+.thanks-msg .container {
+  background: white;
+  padding: 30px 23px 35px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.thanks-msg .container > h3 {
+  margin: 17px 0 28px;
+  font-size: 18px;
+}
+
+.thanks-msg .container > p {
+  font-size: 14px;
+  font-size: 500;
+  line-height: 1.7;
+  color: #7a7a7a;
+  margin-bottom: 30px;
+}
+
+.thanks-msg .container > button {
+  width: 113px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  background-color: #3cb4ac;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+.thanks-msg .container > button:hover {
+  background-color: #147b74;
 }
 /*# sourceMappingURL=style.css.map */
