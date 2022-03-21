@@ -50,7 +50,6 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 30px 25px;
-  overflow: hidden;
 }
 
 @media (min-width: 769px) {
@@ -612,13 +611,16 @@ main .overlay .hamberger-menu > p {
 
 .project-selector {
   width: 100%;
+  height: 100%;
   background: #00000096;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 120px 7%;
   display: none;
   z-index: 200;
+  overflow-y: auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 1025px) {
@@ -692,6 +694,7 @@ main .overlay .hamberger-menu > p {
   border-radius: 10px;
   margin-bottom: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 .project-selector .container > form .card-option.out-of-stock {
@@ -838,7 +841,7 @@ main .overlay .hamberger-menu > p {
 
 .thanks-msg {
   background: #00000096;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 120px 25px;
